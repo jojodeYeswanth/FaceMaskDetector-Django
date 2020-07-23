@@ -1,0 +1,105 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Face-mask Detector</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/mdb.min.css" rel="stylesheet">
+    <link href="/static/css/style.min.css" rel="stylesheet">
+</head>
+
+<body class="grey lighten-3">
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand waves-effect" href="{% url 'home' %}">
+                    <strong class="red-text">Facemask Detector</strong>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a href="https://www.linkedin.com/in/yeshwanth-jojode-b0a364194/" class="nav-link waves-effect" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://twitter.com/YeshwanthJojode" class="nav-link waves-effect" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://github.com/CodingLife99" class="nav-link border border-light rounded waves-effect" target="_blank">
+                                <i class="fab fa-github mr-2"></i>Open in GitHub
+                            </a>
+                        </li>
+                        &nbsp;
+                        &nbsp;
+                        <li class="nav-item">
+                            <a href="https://appsenjoy.com/download/6005af135089344eaa1120460d41e060.html" target="_blank">
+                                <img src="/static/images/appstore.jpg" width="130px">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="sidebar-fixed position-fixed">
+            <a><img src="/static/images/icon.jpeg" width="200px" alt=""></a>
+            <div class="list-group list-group-flush">
+                <a href="#" class="btn white-text red active">
+                    <i class="fas fa-play-circle mr-3"></i>Videos
+                </a>
+                <a href="#" class="btn red-text">
+                    <i class="fas fa-user mr-3"></i>Profile</a>
+            </div>
+        </div>
+    </header>
+    <main class="pt-5 mx-lg-5">
+        <div class="container-fluid mt-5">
+            <div class="card mb-4 wow fadeIn">
+                <div class="card-body d-sm-flex justify-content-between">
+                    <h4 class="mb-2 mb-sm-0 pt-1">
+                        <span>Home Page / Videos</span>
+                    </h4>
+                    <a href="{% url 'upload' %}" class="btn white-text red btn-sm my-0 p">
+                        <i class="fa fa-upload mr-3"></i>Upload video
+                    </a>
+                </div>
+            </div>
+            <div class="row wow fadeIn">
+                <div class="col-md-9 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <video width='card-body' controls>
+                                <source src='{{ MEDIA_URL }}{{ videofile }}' type='video/mp4'>Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card mb-4">
+                        <div class="card-header text-center">Detect</div>
+                        <div class="card-body">
+                            <a href="{% url 'detect_video' %}" class="btn red white-text active" style="width: 100%">
+                                <i class="fa fa-play-circle mr-3"></i>Video
+                            </a>
+                            </br>
+                            </br>
+                            <a href="#" class="btn red white-text active" style="width: 100%">
+                                <i class="fas fa-image mr-3"></i>Image
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'p3plcpnl0769'}) </script>
+<script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+</html>
