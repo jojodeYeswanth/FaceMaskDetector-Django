@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'u+xrdq(f5yp%&noa&3bt4l-4*^n2q2*4^dw2dzy4g(a$pon7^d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'facemask-detector.herokuapp.com']
 
