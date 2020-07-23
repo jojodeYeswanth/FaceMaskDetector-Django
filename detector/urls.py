@@ -13,6 +13,5 @@ urlpatterns = [
                   url(r'^admin/', admin.site.urls),
                   path('', views.show_video, name='home'),
                   path('upload/', views.upload, name='upload'),
-                  path('detect-image/', views.upload, name='detect_image'),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

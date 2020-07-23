@@ -8,7 +8,6 @@ from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 
-from detector import detect_mask_video
 from .forms import VideoForm
 from .models import Video
 
@@ -27,12 +26,6 @@ def upload(request):
         form.save()
     context = {'videofile': video, 'form': form}
     return render(request, 'upload.html', context)
-
-
-def detect_video(request):
-    detect_mask_video.detect(prototxtPath, weightsPath)
-    # detect_mask_video.detect(prototxtPath, weightsPath)
-    return render(request, 'detect_video.html')
 
 
 def show_video(request):

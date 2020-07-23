@@ -24,7 +24,7 @@ SECRET_KEY = 'u+xrdq(f5yp%&noa&3bt4l-4*^n2q2*4^dw2dzy4g(a$pon7^d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'facemask-detector.herokuapp.com']
 
 # Application definition
 
