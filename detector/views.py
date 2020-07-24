@@ -53,7 +53,7 @@ def get_frame():
             label = "{}: {:.2f}%".format(label, max(mask, withoutMask) * 100)
 
             print(color, label)
-            cv2.putText(img, label, (startX, startY - 10), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, 0.45, color, 1)
+            cv2.putText(img, label, (startX, startY - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 1)
             cv2.rectangle(img, (startX, startY), (endX, endY), color, 2)
 
         yield (b'--frame\r\n'b'Content-Type: text/plain\r\n\r\n' + stringData + b'\r\n')
