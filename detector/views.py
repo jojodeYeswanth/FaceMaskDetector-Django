@@ -53,8 +53,12 @@ def get_frame():
             label = "{}: {:.2f}%".format(label, max(mask, withoutMask) * 100)
 
             print(color, label)
-            cv2.putText(img, label, (startX, startY - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 1)
-            cv2.rectangle(img, (startX, startY), (endX, endY), color, 2)
+            cv2.rectangle(img, (startX, startY), (endX, endY), (255, 0, 0), 2)  # --- highlight the face
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            cv2.putText(img, 'name', (0, 130), font, 1, (200, 255, 155))  # ---write the text
+
+            # cv2.putText(img, label, (startX, startY - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2, cv2.LINE_4)
+            # cv2.rectangle(img, (startX, startY), (endX, endY), color, 2)
 
         yield (b'--frame\r\n'b'Content-Type: text/plain\r\n\r\n' + stringData + b'\r\n')
     del (camera)

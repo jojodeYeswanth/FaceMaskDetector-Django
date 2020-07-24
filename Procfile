@@ -1,1 +1,0 @@
-web: gunicorn facemask_detector.wsgi --log-file -
